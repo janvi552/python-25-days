@@ -1,0 +1,59 @@
+#que6
+#conversion km to mile
+
+km=float(input("enter distance in kilometers : "))
+miles=km*0.621371
+print(f"{km} kilometers is equals to {miles} miles")
+
+
+#que7
+#celsius to fahrenheit
+
+celsius=float(input("enter tempreture in celsius : "))
+fahrenheit=(celsius * 9/5) + 32
+print(f"{celsius} degrees celcius is equal to {fahrenheit} degrees fahrenheit")
+
+
+#que8
+#display calender
+
+import calendar
+year=int(input("enter year : "))
+month=int(input("enter month : "))
+cal = calendar.month(year,month)
+print(cal)
+
+
+#que9
+#solve quadratic equation
+
+import math
+a=float(input("enter coefficient a : "))
+b=float(input("enter coefficient b : "))
+c=float(input("enter coefficient c : "))
+discriminant=b**2-4*a*c
+if discriminant > 0:
+    root1 = (- b + math.sqrt(discriminant)) / 2*a
+    root2 = (- b - math.sqrt(discriminant)) / 2*a
+    print(f"Root1 = {root1}, Root2 = {root2}")
+
+elif discriminant==0:
+    root= - b / 2*a
+    print(f" Root = {root}")
+
+else:
+    real_part= - b / 2*a
+    imaginary_part= math.sqrt(abs(discriminant)) / 2*a
+    print(f"root1 = {real_part} + {imaginary_part}i") 
+    print(f"root2 = {real_part} - {imaginary_part}i")
+
+
+#que10
+#swapping without temp
+
+a=float(input("enter first (a): "))
+b=float(input("enter second (b): "))
+a, b = b, a
+print("after swapping...")
+print(f"a = {a}")
+print(f"b = {b}")
