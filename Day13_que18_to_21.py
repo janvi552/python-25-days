@@ -1,0 +1,68 @@
+#write a python program to print the fibonacci sequence
+
+nterms=int(input("how many terms?"))
+n1 ,n2 = 0 ,1
+count=0
+
+if nterms<=0:
+    print("please enter positive number ")
+elif nterms==1:
+    print("fibonacci sequence upto",nterms)
+    print(n1)
+else:
+    while nterms >count:
+        print(n1)
+        nth=n1+n2
+        n1=n2
+        n2=nth
+        count+=1
+
+
+#write a python program to check armstrong number?
+
+num=int(input("enter number :"))
+
+num_str=str(num)
+num_digits=len(num_str)
+
+sum_of_powers=0
+temp_num=num
+
+while temp_num>0:
+    digit = temp_num % 10
+    sum_of_powers +=digit**num_digits
+    temp_num //=10
+
+if sum_of_powers == num:
+    print(f"{num} is a armstrong number")
+else:
+    print(f"{num} is not a armstrong number")
+
+
+#write a python program to find armstrong number in an interval
+
+lower=int(input("enter lower number :"))
+upper=int(input("enter upper number :"))
+
+for num in range(lower,upper+1):
+    digit_num=len(str(num))
+    temp_num=num
+    sum = 0
+
+    while temp_num >0:
+        digit = temp_num % 10
+        sum +=digit**digit_num
+        temp_num //= 10
+
+    if sum==num:
+        print(num)
+
+
+#write a python program to find the sum of nautral numbers
+
+limit=int(input("enter limit :"))
+sum=0
+for i in range(1,limit+1):
+    sum+=i
+
+print("the sum of nautral numbers up to",limit,"is",sum)
